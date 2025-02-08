@@ -1,0 +1,93 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #111;
+  background-color: #fafafa;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 22px 15px;
+}
+@media screen and (min-width: 768px) {
+  .header__inner {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+.header__logo a img {
+  width: 100px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .header__logo a img {
+    width: 135px;
+  }
+}
+
+.header__nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+}
+
+.header__link {
+  font-weight: 700;
+  letter-spacing: 0.48px;
+}
+
+.header__button {
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  padding: 8px 28px;
+  border-radius: 60px;
+  border: 2px solid #111;
+  background: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .header__open {
+    display: none;
+  }
+}
+
+.drawer-icon {
+  width: 36px;
+  height: 21px;
+  position: relative;
+}
+
+.drawer-icon__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 3px;
+  border-radius: 6px;
+  background: #111;
+}
+.drawer-icon__bar:nth-of-type(2) {
+  top: 9px;
+}
+.drawer-icon__bar:nth-of-type(3) {
+  top: 18px;
+}

@@ -1,0 +1,119 @@
+@use "sass:map";
+
+$font-family-ja: "Noto Sans JP", sans-serif;
+$font-family-en: "Montserrat", sans-serif;
+
+$font-size-base: 16px;
+$line-height-base: 1.7;
+
+$color-base: #111;
+$background-base: #fafafa;
+$color-key1: #f5810e;
+$color-key2: #fabe00;
+$color-gradation: linear-gradient(180deg, #f8b819 0%, #f0d320 100%);
+
+$width-inner: 1140px;
+
+$breakpoints: (
+  sp: "not screen and (min-width: 768px)",
+  pc: "screen and (min-width: 768px)",
+) !default;
+
+@mixin mq($breakpoint: pc) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+body {
+  font-family: $font-family-ja;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-base;
+  background-color: $background-base;
+}
+
+.header {
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 15px;
+
+  @include mq(pc) {
+    max-width: calc($width-inner + 15px * 2);
+    margin: 0 auto;
+  }
+}
+
+.header__logo {
+  a {
+    img {
+      width: 100px;
+      display: block;
+
+      @include mq(pc) {
+        width: 135px;
+      }
+    }
+  }
+}
+
+.header__nav {
+  display: none;
+
+  @include mq(pc) {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.header__link {
+  font-weight: 700;
+  letter-spacing: 0.48px;
+}
+
+.header__button {
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  padding: calc(10px - 2px) calc(30px - 2px);
+  border-radius: 60px;
+  border: 2px solid #111;
+  background: #fff;
+}
+
+.header__open {
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+.drawer-icon {
+  width: 36px;
+  height: 21px;
+  position: relative;
+}
+
+.drawer-icon__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 3px;
+  border-radius: 6px;
+  background: $color-base;
+
+  &:nth-of-type(1) {
+  }
+
+  &:nth-of-type(2) {
+    top: 9px;
+  }
+
+  &:nth-of-type(3) {
+    top: 18px;
+  }
+}
