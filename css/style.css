@@ -22,9 +22,15 @@ body {
   .header__inner {
     max-width: 1170px;
     margin: 0 auto;
+    padding-bottom: 21px;
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-top: 3px;
+  }
+}
 .header__logo a img {
   width: 100px;
   display: block;
@@ -64,6 +70,9 @@ body {
   background: #fff;
 }
 
+.header__open {
+  margin-top: 1px;
+}
 @media screen and (min-width: 768px) {
   .header__open {
     display: none;
@@ -107,12 +116,12 @@ body {
 }
 
 .mv__inner {
-  padding: 50px 20px 255px;
+  padding: 50px 20px 254px;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .mv__inner {
-    padding: 110px 30px 109px;
+    padding: 109px 30px 111px;
     max-width: 1100px;
     margin: 0 auto;
   }
@@ -128,7 +137,7 @@ body {
   letter-spacing: 2.2px;
   border-radius: 5px;
   background: #fff;
-  padding: 10px;
+  padding: 9px 9px 11px 10px;
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -141,7 +150,7 @@ body {
     margin: 0;
     font-size: 38px;
     letter-spacing: 3.8px;
-    padding: 12px 16px;
+    padding: 12px 15px;
   }
 }
 
@@ -165,7 +174,7 @@ body {
     text-align: left;
     font-size: 18px;
     letter-spacing: 0.54px;
-    margin-top: 20px;
+    margin-top: 21px;
   }
 }
 
@@ -175,7 +184,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .mv__button {
-    margin-top: 30px;
+    margin-top: 31px;
     text-align: left;
   }
 }
@@ -200,7 +209,8 @@ body {
 @media screen and (min-width: 768px) {
   .mv__img {
     text-align: right;
-    bottom: -88px;
+    bottom: -86px;
+    right: 31px;
     width: 57.6923076923%;
   }
 }
@@ -214,12 +224,12 @@ body {
 }
 
 .case {
-  margin-top: 108px;
+  margin-top: 98px;
   padding: 70px 0 50px;
 }
 @media screen and (min-width: 768px) {
   .case {
-    margin-top: 88px;
+    margin-top: 86px;
   }
 }
 
