@@ -33,6 +33,19 @@ body {
   background-color: $background-base;
 }
 
+// 共通
+.hide-on-sp {
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.hide-on-pc {
+  @include mq(pc) {
+    display: none;
+  }
+}
+
 // header
 .header {
 }
@@ -453,5 +466,112 @@ body {
     display: inline-block;
     border-bottom: 2px solid #111;
     padding-bottom: 2px;
+  }
+}
+// about
+.about {
+  padding: 49px 0 60px;
+  overflow: hidden;
+
+  @include mq(pc) {
+    padding: 50px 0 100px;
+  }
+}
+
+.about__inner {
+}
+
+.about__title {
+  text-align: center;
+
+  img {
+    width: 180px;
+
+    @include mq(pc) {
+      width: 230px;
+    }
+  }
+}
+
+.about__content {
+  margin-top: 150px;
+  padding: 288px 0 105px;
+  position: relative;
+  text-align: center;
+
+  @include mq(pc) {
+    margin-top: 176px;
+    padding: 284px 0 100px;
+  }
+
+  &::before {
+    content: "";
+    width: 1100px;
+    height: 1100px;
+    border-radius: 50%;
+    background: $color-gradation;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    @include mq(pc) {
+      width: 800px;
+      height: 800px;
+    }
+  }
+}
+
+.about__img {
+  position: absolute;
+  text-align: center;
+  top: -110px;
+  left: 0;
+  width: 100%;
+
+  @include mq(pc) {
+    top: -126px;
+  }
+
+  img {
+    width: 320px;
+
+    @include mq(pc) {
+      width: 330px;
+    }
+  }
+}
+
+.about__text {
+  font-weight: 700;
+  line-height: 2.31;
+}
+
+.about__pop {
+  margin-top: 41px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.28px;
+
+  @include mq(pc) {
+    margin-top: 42px;
+  }
+}
+
+.about__button {
+  margin-top: 12px;
+
+  @include mq(pc) {
+    margin-top: 15px;
+  }
+
+  button {
+    font-weight: 700;
+    letter-spacing: 0.48px;
+    padding: calc(10px - 2px) calc(30px - 2px);
+    border-radius: 60px;
+    border: 2px solid #111;
+    background: #fff;
   }
 }
