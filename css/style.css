@@ -1130,3 +1130,100 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url("../img/section-bg.jpg");
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: 529px auto;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.contact__box {
+  border-radius: 30px;
+  background: #fff;
+  padding: 60px 20px;
+}
+@media screen and (min-width: 768px) {
+  .contact__box {
+    padding-left: 264px;
+    padding-right: 264px;
+  }
+}
+
+.contact__form {
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .contact__form {
+    margin-top: 50px;
+  }
+}
+
+.contact__fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.contact__privacy {
+  margin-top: 30px;
+}
+
+.contact__button {
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .contact__button {
+    margin-top: 38px;
+  }
+}
+
+.form-field__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.form-field__label {
+  font-weight: 700;
+}
+
+.form-field__tag {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1.98px;
+  border-radius: 2px;
+  background: #ee8013;
+  display: inline-block;
+  padding: 6px 9px 5px;
+}
+
+.form-field__item {
+  margin-top: 14px;
+}
+.form-field__item [type=text],
+.form-field__item [type=email] {
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid #111;
+  padding: 15px 16px 14px;
+}
