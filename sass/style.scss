@@ -999,3 +999,164 @@ body {
     margin-top: 16px;
   }
 }
+
+// compare
+.compare {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: white;
+
+  @include mq(pc) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.compare__inner {
+}
+
+.compare__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+
+  @include mq(pc) {
+    font-size: 24px;
+  }
+}
+
+.compare__content {
+  margin-top: 42px;
+  overflow-x: auto;
+  padding-bottom: 30px;
+
+  @include mq(pc) {
+    margin-top: 60px;
+    padding-bottom: 0;
+  }
+}
+
+.compare__table {
+  width: 620px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(pc) {
+    width: 1000px;
+  }
+
+  th,
+  td {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+    height: calc(60px - 1px);
+
+    @include mq(pc) {
+      height: 100px;
+    }
+
+    &:nth-child(1) {
+      width: 130px;
+
+      @include mq(pc) {
+        width: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 90px;
+      background: #fff9e5;
+      font-size: 16px;
+      letter-spacing: 0.48px;
+
+      @include mq(pc) {
+        width: auto;
+        font-size: 25px;
+        letter-spacing: 0.75px;
+      }
+
+      img {
+        width: 70px;
+
+        @include mq(pc) {
+          width: 123px;
+        }
+      }
+    }
+  }
+
+  th {
+    letter-spacing: 0.48px;
+
+    @include mq(pc) {
+      font-size: 20px;
+      letter-spacing: 0.6px;
+    }
+  }
+
+  td {
+    font-size: 14px;
+    letter-spacing: 0.42px;
+
+    @include mq(pc) {
+      font-size: 16px;
+      letter-spacing: 0.48px;
+    }
+  }
+
+  thead {
+    th {
+      letter-spacing: 1.6px;
+
+      @include mq(pc) {
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-top: 1.5px solid #000;
+
+      @include mq(pc) {
+        border-top: 3px solid #000;
+      }
+    }
+  }
+}
+
+.compare__attention {
+  color: #686868;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin-top: 11px;
+}
+
+/* スクロールバーの全体（トラック部分） */
+::-webkit-scrollbar {
+  height: 6px; /* 横スクロールバーの高さ */
+}
+
+/* スクロールバーの背景（トラック部分） */
+::-webkit-scrollbar-track {
+  border-radius: 7px;
+  background: #d9d9d9;
+}
+
+/* スクロールバーのつまみ部分 */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #fabe00;
+  // border-left: 200px solid #f0f0f0;
+}
+
+/* スクロールバーのつまみにホバー時の色 */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

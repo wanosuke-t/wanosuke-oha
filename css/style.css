@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -965,4 +966,167 @@ body {
     font-size: 15px;
     margin-top: 16px;
   }
+}
+
+.compare {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: white;
+}
+@media screen and (min-width: 768px) {
+  .compare {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.compare__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .compare__title {
+    font-size: 24px;
+  }
+}
+
+.compare__content {
+  margin-top: 42px;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .compare__content {
+    margin-top: 60px;
+    padding-bottom: 0;
+  }
+}
+
+.compare__table {
+  width: 620px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .compare__table {
+    width: 1000px;
+  }
+}
+.compare__table th,
+.compare__table td {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+  height: 59px;
+}
+@media screen and (min-width: 768px) {
+  .compare__table th,
+  .compare__table td {
+    height: 100px;
+  }
+}
+.compare__table th:nth-child(1),
+.compare__table td:nth-child(1) {
+  width: 130px;
+}
+@media screen and (min-width: 768px) {
+  .compare__table th:nth-child(1),
+  .compare__table td:nth-child(1) {
+    width: auto;
+  }
+}
+.compare__table th:nth-child(2),
+.compare__table td:nth-child(2) {
+  width: 90px;
+  background: #fff9e5;
+  font-size: 16px;
+  letter-spacing: 0.48px;
+}
+@media screen and (min-width: 768px) {
+  .compare__table th:nth-child(2),
+  .compare__table td:nth-child(2) {
+    width: auto;
+    font-size: 25px;
+    letter-spacing: 0.75px;
+  }
+}
+.compare__table th:nth-child(2) img,
+.compare__table td:nth-child(2) img {
+  width: 70px;
+}
+@media screen and (min-width: 768px) {
+  .compare__table th:nth-child(2) img,
+  .compare__table td:nth-child(2) img {
+    width: 123px;
+  }
+}
+.compare__table th {
+  letter-spacing: 0.48px;
+}
+@media screen and (min-width: 768px) {
+  .compare__table th {
+    font-size: 20px;
+    letter-spacing: 0.6px;
+  }
+}
+.compare__table td {
+  font-size: 14px;
+  letter-spacing: 0.42px;
+}
+@media screen and (min-width: 768px) {
+  .compare__table td {
+    font-size: 16px;
+    letter-spacing: 0.48px;
+  }
+}
+.compare__table thead th {
+  letter-spacing: 1.6px;
+}
+@media screen and (min-width: 768px) {
+  .compare__table thead th {
+    letter-spacing: 2px;
+  }
+}
+.compare__table tbody tr {
+  border-top: 1.5px solid #000;
+}
+@media screen and (min-width: 768px) {
+  .compare__table tbody tr {
+    border-top: 3px solid #000;
+  }
+}
+
+.compare__attention {
+  color: #686868;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin-top: 11px;
+}
+
+/* スクロールバーの全体（トラック部分） */
+::-webkit-scrollbar {
+  height: 6px; /* 横スクロールバーの高さ */
+}
+
+/* スクロールバーの背景（トラック部分） */
+::-webkit-scrollbar-track {
+  border-radius: 7px;
+  background: #d9d9d9;
+}
+
+/* スクロールバーのつまみ部分 */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #fabe00;
+}
+
+/* スクロールバーのつまみにホバー時の色 */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
