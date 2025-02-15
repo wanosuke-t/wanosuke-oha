@@ -407,6 +407,20 @@
         </div>
       </div>
     </section>
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta__inner inner">
+        <p class="cta__text">
+          どうですか？<br class="hide-on-pc" /><span class="inline-block"
+            >早速今日から使ってみたく</span
+          ><span class="inline-block">なりましたか？</span
+          ><br />てかほんと使って。お願い。
+        </p>
+        <div class="cta__button">
+          <button class="button">今すぐダウンロード</button>
+        </div>
+      </div>
+    </section>
     <!-- compare -->
     <div class="compare">
       <div class="compare__inner inner">
@@ -466,6 +480,7 @@
                 </div>
                 <div class="form-field__item">
                   <input
+                    class="form-text"
                     type="text"
                     name=""
                     id="your-name"
@@ -482,6 +497,7 @@
                 </div>
                 <div class="form-field__item">
                   <input
+                    class="form-text"
                     type="email"
                     name=""
                     id="your-email"
@@ -489,16 +505,111 @@
                   />
                 </div>
               </div>
-              <div class="contact__field">お問い合わせ項目</div>
-              <div class="contact__field">年代</div>
-              <div class="contact__field">お問い合わせ内容</div>
+              <div class="contact__field">
+                <div class="form-field__head">
+                  <div class="form-field__label">お問い合わせ項目</div>
+                  <span class="form-field__tag">必須</span>
+                </div>
+                <div class="form-field__item">
+                  <div class="form-field__radios">
+                    <label class="form-field__radio form-radio">
+                      <input
+                        class="form-radio__input"
+                        type="radio"
+                        name="your-name"
+                        id=""
+                      />
+                      <span class="form-radio__text">アプリの質問</span>
+                    </label>
+                    <label class="form-field__radio form-radio">
+                      <input
+                        class="form-radio__input"
+                        type="radio"
+                        name="your-name"
+                        id=""
+                      />
+                      <span class="form-radio__text">取材の依頼</span>
+                    </label>
+                    <label class="form-field__radio form-radio">
+                      <input
+                        class="form-radio__input"
+                        type="radio"
+                        name="your-name"
+                        id=""
+                      />
+                      <span class="form-radio__text">その他</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="contact__field">
+                <div class="form-field__head">
+                  <label for="your-age" class="form-field__label">年代</label>
+                  <span class="form-field__tag is-option">任意</span>
+                </div>
+                <div class="form-field__item">
+                  <select name="" id="your-age" class="form-select">
+                    <option value="">選択してください</option>
+                    <option value="">10代</option>
+                    <option value="">20代</option>
+                    <option value="">30代</option>
+                    <option value="">40代</option>
+                    <option value="">50代</option>
+                    <option value="">60代</option>
+                    <option value="">70代</option>
+                    <option value="">80代</option>
+                  </select>
+                </div>
+              </div>
+              <div class="contact__field">
+                <div class="form-field__head">
+                  <label for="your-message" class="form-field__label"
+                    >お問い合わせ内容</label
+                  >
+                  <span class="form-field__tag">必須</span>
+                </div>
+                <div class="form-field__item">
+                  <textarea
+                    class="form-textarea"
+                    name=""
+                    id="your-message"
+                    placeholder="ここに文章を入力してくださいここに文章を入力してください"
+                  ></textarea>
+                </div>
+              </div>
             </div>
-            <div class="contact__privacy">プライバシーポリシーに同意する</div>
-            <div class="contact__button">送信する</div>
+            <div class="contact__privacy">
+              <label class="form-checkbox">
+                <input
+                  class="form-checkbox__input"
+                  type="checkbox"
+                  name=""
+                  id=""
+                />
+                <span class="form-checkbox__text"
+                  ><a target="_blank" href="">プライバシーポリシー</a
+                  >に同意する</span
+                >
+              </label>
+            </div>
+            <div class="contact__button">
+              <input class="button" type="submit" value="送信する" />
+            </div>
           </form>
         </div>
       </div>
     </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__inner inner">
+        <small class="footer__copyright">COPYRIGHT 2023 株式会社デイトラ</small>
+      </div>
+    </footer>
+
+    <!-- page top -->
+    <a href="" class="pagetop"><img src="./img/pagetop-img.png" alt="" /></a>
+
     <!-- js -->
     <script src="./js/script.js" defer></script>
   </body>

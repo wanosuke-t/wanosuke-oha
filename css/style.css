@@ -19,6 +19,11 @@ body {
   }
 }
 
+.inline-block {
+  display: inline-block;
+  font-weight: inherit;
+}
+
 .inner {
   padding: 0 15px;
 }
@@ -824,7 +829,7 @@ body {
 }
 
 .merit {
-  padding: 61px 0;
+  padding: 61px 0px;
 }
 @media screen and (min-width: 768px) {
   .merit {
@@ -966,6 +971,38 @@ body {
     font-size: 15px;
     margin-top: 16px;
   }
+}
+
+.cta {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8bd1e), to(#f0d320));
+  background: linear-gradient(180deg, #f8bd1e 0%, #f0d320 100%);
+}
+@media screen and (min-width: 768px) {
+  .cta {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.cta__text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.48px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .cta__text {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+  }
+}
+
+.cta__button {
+  text-align: center;
+  margin-top: 16px;
 }
 
 .compare {
@@ -1153,8 +1190,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .contact__box {
-    padding-left: 264px;
-    padding-right: 264px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -1164,6 +1201,9 @@ body {
 @media screen and (min-width: 768px) {
   .contact__form {
     margin-top: 50px;
+    max-width: 612px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1178,12 +1218,27 @@ body {
   gap: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  .contact__field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 32px;
+  }
+}
+
 .contact__privacy {
   margin-top: 30px;
+  text-align: center;
+  line-height: 24px;
 }
 
 .contact__button {
   margin-top: 30px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .contact__button {
@@ -1200,9 +1255,20 @@ body {
           align-items: center;
   gap: 10px;
 }
+@media screen and (min-width: 768px) {
+  .form-field__head {
+    width: 180px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+}
 
 .form-field__label {
   font-weight: 700;
+  line-height: 24px;
 }
 
 .form-field__tag {
@@ -1214,16 +1280,195 @@ body {
   border-radius: 2px;
   background: #ee8013;
   display: inline-block;
-  padding: 6px 9px 5px;
+  padding: 6px 8px 5px;
+}
+.form-field__tag.is-option {
+  background: #43b549;
 }
 
 .form-field__item {
   margin-top: 14px;
 }
-.form-field__item [type=text],
-.form-field__item [type=email] {
+@media screen and (min-width: 768px) {
+  .form-field__item {
+    margin-top: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.form-field__radios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .form-field__radios {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.form-text {
   width: 100%;
   border-radius: 5px;
   border: 3px solid #111;
-  padding: 15px 16px 14px;
+  padding: 12px 13px 11px;
+}
+
+.form-radio {
+  line-height: 24px;
+}
+
+.form-radio__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+.form-radio__input:checked + .form-radio__text::after {
+  opacity: 1;
+}
+.form-radio__input:focus + .form-radio__text::before {
+  border-color: #fabe00;
+}
+
+.form-radio__text {
+  padding-left: 28px;
+  font-weight: 700;
+  position: relative;
+}
+.form-radio__text::before, .form-radio__text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+}
+.form-radio__text::before {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #111;
+  left: 0;
+}
+.form-radio__text::after {
+  width: 10px;
+  height: 10px;
+  background: #f5810e;
+  left: 7px;
+  opacity: 0;
+}
+
+.form-select {
+  border-radius: 5px;
+  border: 3px solid #111;
+  background: #fff;
+  padding: 15px 46px 14px 16px;
+  padding: 12px 43px 11px 13px;
+  width: 100%;
+  font-weight: 700;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../img/select_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 8px;
+  background-position: right 15px center;
+}
+
+.form-textarea {
+  border-radius: 5px;
+  border: 3px solid #111;
+  background: #fff;
+  width: 100%;
+  height: 180px;
+  padding: 13px;
+}
+
+.form-checkbox__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+.form-checkbox__input:checked + .form-checkbox__text::after {
+  opacity: 1;
+}
+
+.form-checkbox__text {
+  position: relative;
+  padding-left: 31px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.form-checkbox__text::before, .form-checkbox__text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.form-checkbox__text::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 1px;
+  border: 1px solid #111;
+  left: 1px;
+}
+.form-checkbox__text::after {
+  width: 23px;
+  height: 17.53px;
+  background: url("../img/checkbox-icon.svg") no-repeat center center/contain;
+  left: 0;
+  margin-top: -1.2px;
+  opacity: 0;
+}
+.form-checkbox__text a {
+  font-weight: inherit;
+  text-decoration-line: underline;
+  text-underline-position: from-font;
+}
+
+.footer {
+  background: #111;
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+
+.footer__inner {
+  text-align: center;
+  line-height: 12px;
+}
+
+.footer__copyright {
+  color: #f5f5f5;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.96px;
+}
+
+.pagetop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: min(13.3333333333%, 50px);
+}
+@media screen and (min-width: 768px) {
+  .pagetop {
+    bottom: 30px;
+    right: 16px;
+    width: 76px;
+  }
 }
