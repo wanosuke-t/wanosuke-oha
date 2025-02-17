@@ -101,10 +101,21 @@ body {
   background: #fff;
   min-width: 150px;
   text-align: center;
+  transition: 0.3s;
+  display: inline-block;
+
+  &:hover {
+    background: $color-key2;
+  }
 
   &--type2 {
     color: #fff;
     background: #111;
+
+    &:hover {
+      color: #111;
+      background: #fff;
+    }
   }
 }
 
@@ -155,15 +166,14 @@ body {
 .header__link {
   font-weight: 700;
   letter-spacing: 0.48px;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $color-key1;
+  }
 }
 
 .header__button {
-  // font-weight: 700;
-  // letter-spacing: 0.48px;
-  // padding: calc(10px - 2px) calc(30px - 2px);
-  // border-radius: 60px;
-  // border: 2px solid #111;
-  // background: #fff;
 }
 
 .header__open {
@@ -178,6 +188,25 @@ body {
   width: 36px;
   height: 21px;
   position: relative;
+  z-index: 100;
+
+  &.is-checked {
+    .drawer-icon__bar {
+      &:nth-of-type(1) {
+        top: 10px;
+        transform: rotate(-30deg);
+      }
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+
+      &:nth-of-type(3) {
+        top: 10px;
+        transform: rotate(30deg);
+      }
+    }
+  }
 }
 
 .drawer-icon__bar {
@@ -188,6 +217,7 @@ body {
   height: 3px;
   border-radius: 6px;
   background: $color-base;
+  transition: transform 0.3s linear, top 0.3s linear;
 
   &:nth-of-type(1) {
   }
@@ -199,6 +229,41 @@ body {
   &:nth-of-type(3) {
     top: 18px;
   }
+}
+
+// drawer
+.drawer-content {
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #f7ba1a;
+  z-index: 50;
+  padding: 86px 40px 40px;
+  transform: translateX(100%);
+  transition: transform 0.3s linear;
+
+  &.is-checked {
+    transform: translateX(0);
+  }
+}
+
+.drawer-content__menu {
+}
+
+.drawer-content__link {
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: right;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+}
+
+.drawer-content__button {
+  margin-top: 14px;
+  text-align: right;
 }
 
 // main visual
@@ -389,13 +454,6 @@ body {
 }
 
 .news__inner {
-  // padding: 0 15px;
-
-  // @include mq(pc) {
-  //   padding: 0 30px;
-  //   max-width: calc($width-inner + 30px * 2);
-  //   margin: 0 auto;
-  // }
 }
 
 .news__card {
@@ -458,11 +516,16 @@ body {
   flex-direction: column;
   gap: 8px;
   padding: 10px 0;
+  transition: background 0.3s;
 
   @include mq(pc) {
     flex-direction: row;
     gap: 0;
     padding: 12px 0;
+  }
+
+  &:hover {
+    background: #fff9e5;
   }
 }
 
@@ -526,10 +589,16 @@ body {
   a {
     font-weight: 700;
     display: inline-block;
-    border-bottom: 2px solid #111;
+    border-bottom: 2px solid currentColor;
     padding-bottom: 2px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $color-key2;
+    }
   }
 }
+
 // about
 .about {
   padding: 49px 0 60px;
@@ -1189,7 +1258,7 @@ body {
 /* スクロールバーのつまみ部分 */
 ::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background: #fabe00;
+  background: $color-key2;
   // border-left: 200px solid #f0f0f0;
 }
 
@@ -1329,10 +1398,23 @@ body {
   border-radius: 5px;
   border: 3px solid #111;
   padding: calc(15px - 3px) calc(16px - 3px) calc(14px - 3px);
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $color-key2;
+    outline: none;
+  }
 }
 
 .form-radio {
   line-height: 24px;
+
+  &:hover {
+    .form-radio__text::before {
+      border: 3px solid $color-key2;
+    }
+  }
 }
 
 .form-radio__input {
@@ -1347,7 +1429,7 @@ body {
   }
 
   &:focus + .form-radio__text::before {
-    border-color: #fabe00;
+    border-color: $color-key2;
   }
 }
 
@@ -1370,12 +1452,13 @@ body {
     height: 24px;
     border: 3px solid #111;
     left: 0;
+    transition: 0.3s;
   }
 
   &::after {
     width: 10px;
     height: 10px;
-    background: #f5810e;
+    background: $color-key1;
     left: 7px;
     opacity: 0;
   }
@@ -1387,7 +1470,6 @@ body {
   background: #fff;
   padding: 15px 46px 14px 16px;
   padding: calc(15px - 3px) calc(46px - 3px) calc(14px - 3px) calc(16px - 3px);
-
   width: 100%;
   font-weight: 700;
   appearance: none;
@@ -1395,6 +1477,13 @@ body {
   background-repeat: no-repeat;
   background-size: 10px 8px;
   background-position: right 15px center;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $color-key2;
+    outline: none;
+  }
 }
 
 .form-textarea {
@@ -1404,9 +1493,21 @@ body {
   width: 100%;
   height: 180px;
   padding: calc(16px - 3px);
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $color-key2;
+    outline: none;
+  }
 }
 
 .form-checkbox {
+  &:hover {
+    .form-checkbox__text::before {
+      border: 3px solid $color-key2;
+    }
+  }
 }
 
 .form-checkbox__input {
@@ -1418,6 +1519,10 @@ body {
 
   &:checked + .form-checkbox__text::after {
     opacity: 1;
+  }
+
+  &:focus + .form-checkbox__text::before {
+    border: 3px solid $color-key2;
   }
 }
 
@@ -1441,6 +1546,7 @@ body {
     border-radius: 1px;
     border: 1px solid #111;
     left: 1px;
+    transition: color 0.3s;
   }
 
   &::after {
@@ -1457,6 +1563,11 @@ body {
     font-weight: inherit;
     text-decoration-line: underline;
     text-underline-position: from-font;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-key1;
+    }
   }
 }
 
