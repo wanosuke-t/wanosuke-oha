@@ -14,3 +14,13 @@ if (drawerIcon && drawerContent) {
     drawerContent.classList.toggle("is-checked");
   });
 }
+
+$(".js-accordion").on("click", function (e) {
+  e.preventDefault();
+  $(this).parent(".qa-box").toggleClass("is-open");
+  if ($(this).parent(".qa-box").hasClass("is-open")) {
+    $(this).next().slideDown();
+  } else {
+    $(this).next().slideUp();
+  }
+});
