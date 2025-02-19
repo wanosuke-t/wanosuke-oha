@@ -33,6 +33,10 @@ body {
   background-color: $background-base;
 }
 
+button {
+  color: $color-base;
+}
+
 // 共通
 .hide-on-sp {
   @include mq(sp) {

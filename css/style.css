@@ -7,6 +7,10 @@ body {
   background-color: #fafafa;
 }
 
+button {
+  color: #111;
+}
+
 @media not screen and (min-width: 768px) {
   .hide-on-sp {
     display: none;
