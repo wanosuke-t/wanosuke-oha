@@ -1437,6 +1437,144 @@ button {
   }
 }
 
+// gallery
+.gallery {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(pc) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.gallery__inner {
+  @include mq(pc) {
+    padding: 0 30px;
+    max-width: calc(800px + 30px * 2);
+  }
+}
+
+.gallery__title {
+}
+
+.gallery__slider {
+  margin-top: 30px;
+
+  @include mq(pc) {
+    margin-top: 60px;
+  }
+}
+
+.gallery__swiper {
+  padding-bottom: 26px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: -5px;
+  margin-right: -5px;
+
+  @include mq(pc) {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.gallery__slide {
+}
+
+.gallery-card {
+  border-radius: 20px;
+  border: 3px solid #111;
+  background: #fff;
+  box-shadow: 0px 9px 30px 0px #f4f4f4;
+  padding: calc(15px - 3px) calc(15px - 3px) calc(12px - 3px);
+
+  @include mq(pc) {
+    border-radius: 30px;
+    padding: calc(20px - 3px) calc(20px - 3px) calc(18px - 3px);
+  }
+}
+
+.gallery-card__img {
+  text-align: center;
+
+  img {
+    border-radius: 10px;
+
+    @include mq(pc) {
+      border-radius: 20px;
+    }
+  }
+}
+
+.gallery-card__text {
+  margin-top: 11px;
+  text-align: center;
+  font-size: 14px;
+
+  @include mq(pc) {
+    margin-top: 18px;
+    font-size: 16px;
+  }
+}
+
+.gallery__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  bottom: 0 !important;
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 !important;
+    background: #bcbcbc;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #fabe00;
+    opacity: 1;
+  }
+}
+
+.gallery__prev,
+.gallery__next {
+  width: 40px;
+  height: 40px;
+  margin-top: -38px;
+
+  @include mq(pc) {
+    width: 50px;
+    height: 50px;
+    margin-top: -60px;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.gallery__prev {
+  left: 0;
+  background: url("../img/prev-icon.png") no-repeat center center / contain;
+
+  @include mq(pc) {
+    left: 10px;
+  }
+}
+
+.gallery__next {
+  right: 0;
+  background: url("../img/next-icon.png") no-repeat center center / contain;
+
+  @include mq(pc) {
+    right: 10px;
+  }
+}
+
 // contact
 .contact {
   padding-top: 60px;

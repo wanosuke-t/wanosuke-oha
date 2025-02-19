@@ -24,3 +24,22 @@ $(".js-accordion").on("click", function (e) {
     $(this).next().slideUp();
   }
 });
+
+// swiper
+const swiper = new Swiper("#js-gallery-swiper", {
+  spaceBetween: 82,
+
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: "#js-gallery-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: "#js-gallery-next",
+    prevEl: "#js-gallery-prev",
+  },
+});

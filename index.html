@@ -18,6 +18,7 @@
     />
 
     <!-- css -->
+    <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -533,6 +534,72 @@
       </div>
     </div>
 
+    <!-- gallery -->
+    <section class="gallery">
+      <div class="gallery__inner inner">
+        <div class="gallery__title">
+          <div class="heading">
+            <div class="heading-en">GALLERY</div>
+            <div class="heading-jp">ギャラリー</div>
+          </div>
+        </div>
+        <div class="gallery__slider">
+          <!-- Slider main container -->
+          <div id="js-gallery-swiper" class="swiper gallery__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide gallery__slide">
+                <div class="gallery-card">
+                  <div class="gallery-card__img">
+                    <img src="./img/gallery-1.jpg" alt="" />
+                  </div>
+                  <p class="gallery-card__text">
+                    最高な海。を拝んでいる私最高...
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <div class="gallery-card">
+                  <div class="gallery-card__img">
+                    <img src="./img/gallery-2.jpg" alt="" />
+                  </div>
+                  <p class="gallery-card__text">
+                    モーニングは一番のり。今日も私えらい。
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <div class="gallery-card">
+                  <div class="gallery-card__img">
+                    <img src="./img/gallery-3.jpg" alt="" />
+                  </div>
+                  <p class="gallery-card__text">
+                    風車のある公園ヨガ。みんな私に釘付け。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div
+              id="js-gallery-pagination"
+              class="swiper-pagination gallery__pagination"
+            ></div>
+
+            <!-- If we need navigation buttons -->
+            <div
+              id="js-gallery-prev"
+              class="swiper-button-prev gallery__prev"
+            ></div>
+            <div
+              id="js-gallery-next"
+              class="swiper-button-next gallery__next"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- contact -->
     <section class="contact">
       <div class="contact__inner inner">
@@ -683,6 +750,7 @@
     <a href="" class="pagetop"><img src="./img/pagetop-img.png" alt="" /></a>
 
     <!-- js -->
+    <script src="./js/lib/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js" defer></script>
   </body>
