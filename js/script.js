@@ -43,3 +43,33 @@ const swiper = new Swiper("#js-gallery-swiper", {
     prevEl: "#js-gallery-prev",
   },
 });
+
+// モーダル
+$("#js-modal-open").on("click", function (e) {
+  e.preventDefault();
+  // $("#js-about-modal").attr("open", true);
+  $("#js-about-modal").showModal();
+});
+
+$(".js-modal-close").on("click", function (e) {
+  e.preventDefault();
+  $("#js-about-modal").close();
+});
+
+const modalOpen = document.getElementById("js-modal-open");
+const modalClose = document.querySelectorAll(".js-modal-close");
+const aboutModal = document.getElementById("js-about-modal");
+
+if (modalOpen && aboutModal) {
+  modalOpen.addEventListener("click", function (e) {
+    e.preventDefault();
+    aboutModal.showModal();
+  });
+}
+
+modalClose.forEach(function (closeButton) {
+  closeButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    aboutModal.close();
+  });
+});

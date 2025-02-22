@@ -681,6 +681,75 @@ button {
     margin-top: 15px;
   }
 }
+.about-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: calc(100% - 30px);
+  max-height: calc(100% - 40px);
+  padding: 16px 15px 64px;
+  border: 0;
+  border-radius: 20px;
+  overflow: auto;
+  z-index: 60;
+  overscroll-behavior-y: none;
+}
+@media screen and (min-width: 768px) {
+  .about-modal {
+    padding: 49px 70px 75px;
+    max-width: 1140px;
+  }
+}
+.about-modal::-ms-backdrop {
+  opacity: 0.2;
+  background: #000;
+}
+.about-modal::backdrop {
+  opacity: 0.2;
+  background: #000;
+}
+
+.about-modal__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: sticky;
+  top: 0;
+}
+
+.about-modal__close-icon img {
+  width: 37px;
+  height: 37px;
+}
+
+.about-modal__body {
+  margin-top: 12px;
+}
+@media screen and (min-width: 768px) {
+  .about-modal__body {
+    margin-top: 43px;
+  }
+}
+.about-modal__body p {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .about-modal__body p {
+    font-size: 16px;
+  }
+}
+.about-modal__body p:nth-child(n+2) {
+  margin-top: 20px;
+}
+
+.about-modal__close-button {
+  margin-top: 30px;
+  text-align: center;
+}
+
 .movie {
   padding: 60px 0;
   background-image: url("../img/section-bg.jpg");
@@ -1231,6 +1300,7 @@ button {
 /* スクロールバーの全体（トラック部分） */
 ::-webkit-scrollbar {
   height: 6px; /* 横スクロールバーの高さ */
+  width: 6px;
 }
 
 /* スクロールバーの背景（トラック部分） */

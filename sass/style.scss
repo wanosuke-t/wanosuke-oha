@@ -711,6 +711,70 @@ button {
   }
 }
 
+// about-modal
+.about-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: calc(100% - 15px * 2);
+  max-height: calc(100% - 20px * 2);
+  padding: 16px 15px 64px;
+  border: 0;
+  border-radius: 20px;
+  overflow: auto;
+  z-index: 60;
+  overscroll-behavior-y: none;
+
+  @include mq(pc) {
+    padding: 49px 70px 75px;
+    max-width: 1140px;
+  }
+
+  &::backdrop {
+    opacity: 0.2;
+    background: #000;
+  }
+}
+
+.about-modal__head {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+}
+
+.about-modal__close-icon {
+  img {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+.about-modal__body {
+  margin-top: 12px;
+
+  @include mq(pc) {
+    margin-top: 43px;
+  }
+
+  p {
+    font-size: 14px;
+
+    @include mq(pc) {
+      font-size: 16px;
+    }
+
+    &:nth-child(n + 2) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.about-modal__close-button {
+  margin-top: 30px;
+  text-align: center;
+}
+
 // movie
 .movie {
   padding: 60px 0;
@@ -1251,6 +1315,7 @@ button {
 /* スクロールバーの全体（トラック部分） */
 ::-webkit-scrollbar {
   height: 6px; /* 横スクロールバーの高さ */
+  width: 6px;
 }
 
 /* スクロールバーの背景（トラック部分） */
@@ -1263,7 +1328,6 @@ button {
 ::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background: $color-key2;
-  // border-left: 200px solid #f0f0f0;
 }
 
 /* スクロールバーのつまみにホバー時の色 */
