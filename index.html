@@ -30,10 +30,10 @@
           <a href=""> <img src="./img/logo.png" alt="OHA!" /></a>
         </h1>
         <nav class="header__nav">
-          <a href="#" class="header__link">サービスについて</a>
-          <a href="#" class="header__link">使い方</a>
-          <a href="#" class="header__link">メリット</a>
-          <a href="#" class="header__button button">お問い合わせ</a>
+          <a href="#about" class="header__link">サービスについて</a>
+          <a href="#how-to-use" class="header__link">使い方</a>
+          <a href="#merit" class="header__link">メリット</a>
+          <a href="#contact" class="header__button button">お問い合わせ</a>
         </nav>
         <button id="js-drawer-icon" class="header__open drawer-icon">
           <span class="drawer-icon__bar"></span>
@@ -46,11 +46,11 @@
     <!-- drawer -->
     <div id="js-drawer-content" class="drawer-content">
       <nav class="drawer-content__menu">
-        <a href="" class="drawer-content__link">サービスについて</a>
-        <a href="" class="drawer-content__link">使い方</a>
-        <a href="" class="drawer-content__link">メリット</a>
+        <a href="#about" class="drawer-content__link">サービスについて</a>
+        <a href="#how-to-use" class="drawer-content__link">使い方</a>
+        <a href="#merit" class="drawer-content__link">メリット</a>
         <div class="drawer-content__button">
-          <a href="" class="button">お問い合わせ</a>
+          <a href="#contact" class="button">お問い合わせ</a>
         </div>
       </nav>
     </div>
@@ -67,7 +67,7 @@
             OHA!は、朝起きたい人と<br />朝起こされたい人が<br />ランダムにマッチングしちゃう<br />通話アプリです。
           </p>
           <div class="mv__button">
-            <a href="#" class="button button--type2">アプリダウンロード</a>
+            <a href="#contact" class="button button--type2">アプリダウンロード</a>
           </div>
         </div>
         <div class="mv__img">
@@ -158,7 +158,7 @@
       </div>
     </section>
     <!-- about -->
-    <section class="about">
+    <section id="about" class="about">
       <div class="about__inner">
         <div class="about__title">
           <img src="./img/about-logo.png" alt="" />
@@ -242,7 +242,7 @@
       </div>
     </section>
     <!-- how to use -->
-    <section class="how-to-use">
+    <section id="how-to-use" class="how-to-use">
       <div class="how-to-use__inner inner">
         <div class="how-to-use__title">
           <div class="heading">
@@ -367,7 +367,7 @@
       </div>
     </section>
     <!-- merit -->
-    <section class="merit">
+    <section id="merit" class="merit">
       <div class="merit__inner inner">
         <div class="merit__title">
           <div class="heading">
@@ -453,7 +453,7 @@
           ><br />てかほんと使って。お願い。
         </p>
         <div class="cta__button">
-          <button class="button">今すぐダウンロード</button>
+          <a href="#contact" class="button">今すぐダウンロード</a>
         </div>
       </div>
     </section>
@@ -624,7 +624,7 @@
     </section>
 
     <!-- contact -->
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="contact__inner inner">
         <div class="contact__box">
           <div class="heading">
@@ -770,7 +770,7 @@
     </footer>
 
     <!-- page top -->
-    <a href="" class="pagetop"><img src="./img/pagetop-img.png" alt="" /></a>
+    <a href="#" id="js-pagetop" class="pagetop"><img src="./img/pagetop-img.png" alt="" /></a>
 
     <!-- js -->
     <script src="./js/lib/swiper-bundle.min.js"></script>

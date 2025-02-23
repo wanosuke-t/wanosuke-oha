@@ -1972,6 +1972,15 @@ button {
   bottom: 10px;
   right: 10px;
   width: min(13.3333333333%, 50px);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.pagetop.is-show {
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (min-width: 768px) {
   .pagetop {

@@ -73,3 +73,47 @@ modalClose.forEach(function (closeButton) {
     aboutModal.close();
   });
 });
+
+// スムーススクロール
+$('#js-drawer-content a[href^="#"]').on("click", function (e) {
+  drawerIcon.classList.remove("is-checked");
+  drawerContent.classList.remove("is-checked");
+});
+
+$('a[href^="#"]').on("click", function (e) {
+  e.preventDefault();
+  const scrollSpeed = 1000;
+  const targetId = $(this).attr("href");
+  const targetElement = $("#" == targetId ? "html" : targetId);
+  const targetPosition = targetElement.offset().top;
+
+  if (targetElement.length) {
+    $("html, body").animate(
+      {
+        scrollTop: targetPosition,
+      },
+      scrollSpeed,
+      "swing"
+    );
+  }
+});
+
+// ページトップ
+
+// $(window).on("scroll", function () {
+//   if ($(this).scrollTop() > 100) {
+//     $("#js-pagetop").addClass("is-show");
+//   } else {
+//     $("#js-pagetop").removeClass("is-show");
+//   }
+// });
+
+const pageTop = document.querySelector("#js-pagetop");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 100) {
+    pageTop.classList.add("is-show");
+  } else {
+    pageTop.classList.remove("is-show");
+  }
+});
