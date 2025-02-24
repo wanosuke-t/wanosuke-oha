@@ -18,6 +18,7 @@
     />
 
     <!-- css -->
+    <link rel="stylesheet" href="css/lib/animate.css" />
     <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -67,7 +68,9 @@
             OHA!は、朝起きたい人と<br />朝起こされたい人が<br />ランダムにマッチングしちゃう<br />通話アプリです。
           </p>
           <div class="mv__button">
-            <a href="#contact" class="button button--type2">アプリダウンロード</a>
+            <a href="#contact" class="button button--type2"
+              >アプリダウンロード</a
+            >
           </div>
         </div>
         <div class="mv__img">
@@ -78,7 +81,7 @@
     <!-- 導入実績 -->
     <section class="case">
       <div class="case__inner">
-        <h2 class="case__title">導入実績</h2>
+        <h2 class="case__title js-in-view fade-in-up wow fadeInRight">導入実績</h2>
         <div class="case__items">
           <div class="case__item">
             <img src="./img/case-1-img.png" alt="" />
@@ -111,7 +114,7 @@
     <section class="news">
       <div class="news__inner inner">
         <div class="news__card">
-          <h2 class="news__title">NEWS</h2>
+          <h2 class="news__title js-in-view fade-in-up wow fadeInRight">NEWS</h2>
           <ul class="news__list">
             <li class="news__item">
               <a href="#" class="news__link">
@@ -160,7 +163,7 @@
     <!-- about -->
     <section id="about" class="about">
       <div class="about__inner">
-        <div class="about__title">
+        <div class="about__title js-in-view fade-in-up wow fadeInRight">
           <img src="./img/about-logo.png" alt="" />
         </div>
         <div class="about__content">
@@ -224,8 +227,10 @@
     <section class="movie">
       <div class="movie__inner">
         <div class="heading">
-          <div class="heading-en">MOVIE</div>
-          <div class="heading-jp">2秒で分かる！OHA!について</div>
+          <div class="heading-en js-in-view fade-in-up wow fadeInRight">MOVIE</div>
+          <div class="heading-jp js-in-view fade-in-up wow fadeInRight">
+            2秒で分かる！OHA!について
+          </div>
         </div>
         <div class="movie__iframe">
           <iframe
@@ -246,8 +251,8 @@
       <div class="how-to-use__inner inner">
         <div class="how-to-use__title">
           <div class="heading">
-            <div class="heading-en">HOW TO USE</div>
-            <div class="heading-jp">OHA!の使い方</div>
+            <div class="heading-en js-in-view fade-in-up wow fadeInRight">HOW TO USE</div>
+            <div class="heading-jp js-in-view fade-in-up wow fadeInRight">OHA!の使い方</div>
           </div>
         </div>
         <div class="how-to-use__boxes">
@@ -371,8 +376,10 @@
       <div class="merit__inner inner">
         <div class="merit__title">
           <div class="heading">
-            <div class="heading-en">MERIT</div>
-            <div class="heading-jp">OHA!を使うメリット</div>
+            <div class="heading-en js-in-view fade-in-up wow fadeInRight">MERIT</div>
+            <div class="heading-jp js-in-view fade-in-up wow fadeInRight">
+              OHA!を使うメリット
+            </div>
           </div>
         </div>
         <div class="merit__boxes">
@@ -460,7 +467,9 @@
     <!-- compare -->
     <div class="compare">
       <div class="compare__inner inner">
-        <div class="compare__title">他のサービスとの違い</div>
+        <div class="compare__title js-in-view fade-in-up wow fadeInRight">
+          他のサービスとの違い
+        </div>
         <div class="compare__content">
           <table class="compare__table">
             <thead>
@@ -502,8 +511,8 @@
       <div class="qa__inner inner">
         <div class="qa__title">
           <div class="heading">
-            <div class="heading-en">Q&A</div>
-            <div class="heading-jp">よくあるご質問</div>
+            <div class="heading-en js-in-view fade-in-up wow fadeInRight">Q&A</div>
+            <div class="heading-jp js-in-view fade-in-up wow fadeInRight">よくあるご質問</div>
           </div>
         </div>
         <div class="qa__boxes">
@@ -562,8 +571,8 @@
       <div class="gallery__inner inner">
         <div class="gallery__title">
           <div class="heading">
-            <div class="heading-en">GALLERY</div>
-            <div class="heading-jp">ギャラリー</div>
+            <div class="heading-en js-in-view fade-in-up wow fadeInRight">GALLERY</div>
+            <div class="heading-jp js-in-view fade-in-up wow fadeInRight">ギャラリー</div>
           </div>
         </div>
         <div class="gallery__slider">
@@ -628,8 +637,8 @@
       <div class="contact__inner inner">
         <div class="contact__box">
           <div class="heading">
-            <div class="heading-en">CONTACT</div>
-            <div class="heading-jp">お問い合わせ</div>
+            <div class="heading-en js-in-view fade-in-up wow fadeInRight">CONTACT</div>
+            <div class="heading-jp js-in-view fade-in-up wow fadeInRight">お問い合わせ</div>
           </div>
           <form class="contact__form">
             <div class="contact__fields">
@@ -770,9 +779,16 @@
     </footer>
 
     <!-- page top -->
-    <a href="#" id="js-pagetop" class="pagetop"><img src="./img/pagetop-img.png" alt="" /></a>
+    <a href="#" id="js-pagetop" class="pagetop"
+      ><img src="./img/pagetop-img.png" alt=""
+    /></a>
 
     <!-- js -->
+    <!-- wow.min.jsを読み込んでから、初期設定しておく -->
+    <script src="js/lib/wow.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <script src="./js/lib/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js" defer></script>
